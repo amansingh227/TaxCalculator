@@ -1,0 +1,72 @@
+<div class="container">
+  <section class="container w-50 text-center">
+    <mat-card class="">
+<form action="" formGroup="calculator">
+        <mat-card-content>
+          <h2 class="example-h2 ">Application du barème</h2>
+
+          <section class="example-section">
+            <mat-progress-bar
+                class="example-margin"
+                [color]="color"
+                [mode]="mode"
+                [value]="value"
+                [bufferValue]="bufferValue">
+            </mat-progress-bar>
+          </section>
+
+        </mat-card-content>
+
+      <div>
+        <div class="float-left">
+          <mat-label>Situation familiale</mat-label> <br />
+          <mat-form-field appearance="standard" formControlName="select">
+            <select class="form-control form-rounded" >
+              <option value="Célibataire">Célibataire</option>
+              <option
+                value="Couple
+        "
+              >
+                Couple
+              </option>
+            </select>
+          </mat-form-field>
+        </div>
+      </div>
+      <div>
+        <label
+          for="
+  Revenu fiscal de référence (année N)
+  "
+        >
+          Revenu fiscal de référence (année N)
+        </label>
+        <input type="text" class="form-control form-rounded"   (keyup)="calculate($event)"  formControlName="amount"/>
+      </div>
+      <div>
+        <label
+          for="
+Impot
+  "
+        >
+          Impot
+        </label>
+        <input type="text" class="form-control form-rounded" [value]="impot" />
+      </div>
+      <div>
+        <label
+          for="
+Taux marginal d'imposition
+  "
+        >
+        Taux marginal d'imposition
+        </label>
+        <input type="text" class="form-control form-rounded" readonly [value]="tax"  formControlName="tax"/>
+      </div>
+    </form>
+    </mat-card>
+    <!-- <mat-card>
+      <mat-card-title>Mécanisme de lissage</mat-card-title>
+    </mat-card> -->
+  </section>
+</div>
